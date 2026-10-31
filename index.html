@@ -9,7 +9,7 @@
     (function() {
         var p = new URLSearchParams(window.location.search);
         if (!p.has('v')) {
-            p.set('v', 'B8AFC5146AD0D66B');
+            p.set('v', '7D19A1799E63CFE0');
             window.location.replace(window.location.pathname + '?' + p.toString());
         }
     })();
@@ -188,7 +188,7 @@
             <h1>欧洲与多币种数字银行资产核验看板</h1>
             <div class="meta-bar">
                 <span>持卡人: <strong>J** Y*</strong></span>
-                <span>核验时间: <strong>2026-10-31 21:02:34</strong></span>
+                <span>核验时间: <strong>2026-10-31 22:03:43</strong></span>
                 <span>权限: <strong>只读 (零转账/零提现)</strong></span>
             </div>
         </div>
@@ -255,7 +255,7 @@
         </div>
         <div class="footer">
             <div>官方防伪电子校验指纹 (SHA-256):</div>
-            <div class="fingerprint">B8AFC5146AD0D66B</div>
+            <div class="fingerprint">7D19A1799E63CFE0</div>
             <p>本凭据由欧洲持牌银行官方 Open Banking API 实时生成，仅作为资产证明参考。受控只读 Token 保护，第三方无权操作或动用资金。</p>
             <button class="refresh-btn" onclick="window.location.href = window.location.pathname + '?v=' + Date.now()">🔄 刷新最新实时余额</button>
         </div>
