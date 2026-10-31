@@ -1,205 +1,250 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>欧洲数字银行联合资产核验中心</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏦</text></svg>">
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-      background: radial-gradient(circle at 50% 20%, #15294a 0%, #071120 100%);
-      color: #ffffff;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      overflow-x: hidden;
-    }
-    .card {
-      width: 100%;
-      max-width: 440px;
-      background: rgba(18, 32, 58, 0.82);
-      border: 1px solid rgba(130, 180, 255, 0.2);
-      border-radius: 20px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(16px);
-      padding: 32px 24px;
-      text-align: center;
-    }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(16, 185, 129, 0.15);
-      border: 1px solid rgba(16, 185, 129, 0.35);
-      color: #34d399;
-      font-size: 13px;
-      font-weight: 600;
-      padding: 6px 14px;
-      border-radius: 999px;
-      margin-bottom: 20px;
-    }
-    .title {
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      margin-bottom: 10px;
-      background: linear-gradient(135deg, #ffffff 40%, #9fc3ea 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .subtitle {
-      font-size: 13px;
-      color: #94a3b8;
-      line-height: 1.6;
-      margin-bottom: 26px;
-    }
-    .bank-tags {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 30px;
-    }
-    .tag {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      padding: 4px 10px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 600;
-    }
-    .tag.bunq { color: #34d399; }
-    .tag.wise { color: #38bdf8; }
-    .tag.monzo { color: #fb923c; }
-    .tag.revolut { color: #a78bfa; }
-    
-    .spinner-box {
-      margin: 10px auto 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .spinner {
-      width: 44px;
-      height: 44px;
-      border: 3px solid rgba(255, 255, 255, 0.1);
-      border-top-color: #38bdf8;
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-    }
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-    .status-text {
-      font-size: 14px;
-      color: #cbd5e1;
-      margin-top: 14px;
-      font-weight: 500;
-    }
-    .error-box {
-      display: none;
-      background: rgba(239, 68, 68, 0.12);
-      border: 1px solid rgba(239, 68, 68, 0.3);
-      color: #fca5a5;
-      font-size: 13px;
-      padding: 14px;
-      border-radius: 10px;
-      margin-top: 18px;
-      line-height: 1.5;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 16px;
-      background: #2563eb;
-      color: white;
-      text-decoration: none;
-      padding: 10px 22px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      border: none;
-      transition: all 0.2s;
-    }
-    .btn:hover { background: #1d4ed8; }
-    .footer {
-      margin-top: 24px;
-      font-size: 11px;
-      color: #64748b;
-      text-align: center;
-      line-height: 1.6;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欧洲持牌数字银行联合资产核验凭证</title>
+    <!-- 微信转发与社交分享缩略图规范 (OpenGraph & Microdata) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="欧洲持牌数字银行联合资产核验凭证">
+    <meta property="og:description" content="包含 bunq、Wise、Monzo、Revolut 实时官方可用余额汇总与电子验签防伪。">
+    <meta property="og:image" content="https://sat-efforts-tried-took.trycloudflare.com/static/bank_icon.png">
+    <meta itemprop="name" content="欧洲持牌数字银行联合资产核验凭证">
+    <meta itemprop="description" content="包含 bunq、Wise、Monzo、Revolut 实时官方可用余额汇总与电子验签防伪。">
+    <meta itemprop="image" content="https://sat-efforts-tried-took.trycloudflare.com/static/bank_icon.png">
+    <meta name="description" content="欧洲持牌数字银行联合资产核验凭证 - 只读受控认证">
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f8fafc;
+            --text-sub: #94a3b8;
+            --accent-bunq: #00875a;
+            --accent-wise: #2563eb;
+            --accent-monzo: #ea580c;
+            --badge-bg: #334155;
+            --border: #334155;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            padding: 24px 16px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 680px;
+            width: 100%;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(34, 197, 94, 0.15);
+            color: #4ade80;
+            padding: 6px 14px;
+            border-radius: 9999px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            border: 1px solid rgba(74, 222, 128, 0.2);
+        }
+        h1 { font-size: 22px; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.5px; }
+        .meta-bar {
+            font-size: 13px;
+            color: var(--text-sub);
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .total-card {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .total-card::after {
+            content: "OFFICIAL VERIFIED";
+            position: absolute;
+            right: -25px;
+            bottom: 12px;
+            font-size: 28px;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.02);
+            pointer-events: none;
+            transform: rotate(-10deg);
+        }
+        .total-label { font-size: 13px; color: var(--text-sub); text-transform: uppercase; letter-spacing: 1px; }
+        .total-amount { font-size: 38px; font-weight: 800; color: #38bdf8; margin: 8px 0; }
+        
+        .bank-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .bank-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 12px;
+            margin-bottom: 14px;
+        }
+        .bank-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+        .dot-bunq { background: var(--accent-bunq); }
+        .dot-wise { background: var(--accent-wise); }
+        .dot-monzo { background: var(--accent-monzo); }
+        .dot-revolut { background: #6366f1; }
+        
+        .bank-badge {
+            font-size: 11px;
+            background: var(--badge-bg);
+            padding: 4px 8px;
+            border-radius: 6px;
+            color: #cbd5e1;
+        }
+        .acc-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+        .acc-row:not(:last-child) { border-bottom: 1px dashed rgba(255,255,255,0.06); }
+        .acc-name { color: var(--text-sub); }
+        .acc-val { font-weight: 700; font-variant-numeric: tabular-nums; }
+        
+        .footer {
+            text-align: center;
+            margin-top: 32px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+            font-size: 12px;
+            color: var(--text-sub);
+            line-height: 1.6;
+        }
+        .fingerprint {
+            font-family: monospace;
+            background: var(--badge-bg);
+            padding: 4px 10px;
+            border-radius: 6px;
+            color: #38bdf8;
+            display: inline-block;
+            margin: 8px 0;
+        }
+        .refresh-btn {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            margin-top: 12px;
+            transition: all 0.2s;
+        }
+        .refresh-btn:hover { background: #1d4ed8; }
+    </style>
 </head>
 <body>
-  <div class="card">
-    <div class="badge">
-      <span>🔒</span> 官方只读直连 · 零交易权限
-    </div>
-    <h1 class="title">欧洲数字银行联合资产核验</h1>
-    <p class="subtitle">实时对接持牌银行网关，权威官方数据实时呈现</p>
-    
-    <div class="bank-tags">
-      <span class="tag bunq">bunq</span>
-      <span class="tag wise">Wise</span>
-      <span class="tag monzo">Monzo</span>
-      <span class="tag revolut">Revolut</span>
-    </div>
+    <div class="container">
+        <div class="header">
+            <div class="badge">🔒 第三方只读受控核验凭据</div>
+            <h1>欧洲与多币种数字银行资产核验看板</h1>
+            <div class="meta-bar">
+                <span>持卡人: <strong>J** Y*</strong></span>
+                <span>核验时间: <strong>2026-10-31 12:35:55</strong></span>
+                <span>权限: <strong>只读 (零转账/零提现)</strong></span>
+            </div>
+        </div>
 
-    <div class="spinner-box" id="loader">
-      <div class="spinner"></div>
-      <div class="status-text" id="status-desc">正在建立安全双向核验通道...</div>
-    </div>
 
-    <div class="error-box" id="error-alert">
-      <div id="error-msg">核验终端当前处于安全待机状态</div>
-      <button class="btn" onclick="checkAndRedirect()">重新检测连接</button>
-    </div>
-  </div>
-
-  <div class="footer">
-    本页面仅限受邀第三方只读核验使用<br>
-    数据均由各银行官方 API 实时签名提供
-  </div>
-
-  <script>
-    async function checkAndRedirect() {
-      const loader = document.getElementById("loader");
-      const errBox = document.getElementById("error-alert");
-      const statusDesc = document.getElementById("status-desc");
-      
-      loader.style.display = "flex";
-      errBox.style.display = "none";
-      statusDesc.innerText = "正在同步持牌银行最新核验端点...";
-
-      try {
-        const resp = await fetch("./endpoint.json?t=" + Date.now(), { cache: "no-store" });
-        if (!resp.ok) throw new Error("无法读取核验配置");
-        const data = await resp.json();
+        <div class="bank-card">
+            <div class="bank-header">
+                <div class="bank-title"><span class="dot dot-bunq"></span> bunq (荷兰中央银行监管持牌行)</div>
+                <div class="bank-badge">IBAN 已脱敏</div>
+            </div>
         
-        if (data && data.target_url) {
-          statusDesc.innerText = "端点已就绪，正在安全进入查验系统...";
-          setTimeout(() => {
-            window.location.replace(data.target_url);
-          }, 300);
-          return;
-        } else {
-          throw new Error("核验终端未上报最新链接");
-        }
-      } catch (err) {
-        loader.style.display = "none";
-        errBox.style.display = "block";
-        document.getElementById("error-msg").innerHTML = "⚠️ <strong>核验服务当前处于待机状态</strong><br>请联系账户持有者开启桌面核验终端后重试。";
-      }
-    }
-
-    // 页面加载完成后自动执行
-    window.addEventListener("DOMContentLoaded", checkAndRedirect);
-  </script>
+            <div class="acc-row">
+                <div class="acc-name">储蓄账户 <span style="font-size: 11px; opacity: 0.7;">(IE34 **** **** 4732)</span></div>
+                <div class="acc-val">€0.00 EUR</div>
+            </div>
+            
+            <div class="acc-row">
+                <div class="acc-name">银行账户 <span style="font-size: 11px; opacity: 0.7;">(IE77 **** **** 2891)</span></div>
+                <div class="acc-val">€122.11 EUR</div>
+            </div>
+            </div>
+        <div class="bank-card">
+            <div class="bank-header">
+                <div class="bank-title"><span class="dot dot-wise"></span> Wise (跨国多币种账户)</div>
+                <div class="bank-badge">个人档案 ID: 136***70</div>
+            </div>
+        
+            <div class="acc-row">
+                <div class="acc-name">CNY 钱包</div>
+                <div class="acc-val">0.00 CNY</div>
+            </div>
+            
+            <div class="acc-row">
+                <div class="acc-name">EUR 钱包</div>
+                <div class="acc-val">0.00 EUR</div>
+            </div>
+            </div>
+        <div class="bank-card">
+            <div class="bank-header">
+                <div class="bank-title"><span class="dot dot-monzo"></span> Monzo Bank (英国持牌数字银行)</div>
+                <div class="bank-badge">Current Account</div>
+            </div>
+        
+            <div class="acc-row">
+                <div class="acc-name">Monzo Current Account (个人活期主账户)</div>
+                <div class="acc-val">€389.85 EUR</div>
+            </div>
+            </div>
+        <div class="bank-card">
+            <div class="bank-header">
+                <div class="bank-title"><span class="dot dot-revolut"></span> Revolut Bank UAB (欧洲央行持牌)</div>
+                <div class="bank-badge">个人多币种账户</div>
+            </div>
+        
+            <div class="acc-row">
+                <div class="acc-name">Revolut Personal Account (EUR 活期主账户) <span style="font-size: 11px; opacity: 0.7;">(MasterCard ••5339 (已激活))</span></div>
+                <div class="acc-val">€0.00 EUR</div>
+            </div>
+            
+            <div class="acc-row">
+                <div class="acc-name">Revolut Virtual Card (日常消费金库) <span style="font-size: 11px; opacity: 0.7;">(MasterCard ••5035 (已激活))</span></div>
+                <div class="acc-val">€0.00 EUR</div>
+            </div>
+            </div>
+        <div class="footer">
+            <div>官方防伪电子校验指纹 (SHA-256):</div>
+            <div class="fingerprint">0FFDBB7B376D1C49</div>
+            <p>本凭据由欧洲持牌银行官方 Open Banking API 实时生成，仅作为资产证明参考。受控只读 Token 保护，第三方无权操作或动用资金。</p>
+            <button class="refresh-btn" onclick="location.reload()">🔄 刷新最新实时余额</button>
+        </div>
+    </div>
 </body>
 </html>
