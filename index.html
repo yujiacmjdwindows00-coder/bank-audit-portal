@@ -9,7 +9,7 @@
     (function() {
         var p = new URLSearchParams(window.location.search);
         if (!p.has('v')) {
-            p.set('v', 'BE86F3A8C116E84D');
+            p.set('v', 'B63CB80E01794718');
             window.location.replace(window.location.pathname + '?' + p.toString());
         }
     })();
@@ -188,7 +188,7 @@
             <h1>欧洲与多币种数字银行资产核验看板</h1>
             <div class="meta-bar">
                 <span>持卡人: <strong>J** Y*</strong></span>
-                <span>核验时间: <strong>2026-10-31 20:10:07</strong></span>
+                <span>核验时间: <strong>2026-10-31 20:20:11</strong></span>
                 <span>权限: <strong>只读 (零转账/零提现)</strong></span>
             </div>
         </div>
@@ -196,17 +196,17 @@
 
     <div class="bank-card">
         <div class="bank-header">
-            <div class="bank-title"><span class="dot dot-bunq"></span> bunq (荷兰中央银行监管持牌行)</div>
-            <div class="bank-badge">IBAN 已脱敏</div>
+            <div class="bank-title"><span class="dot dot-bunq"></span> bunq (爱尔兰与欧洲中央银行监管持牌行)</div>
+            <div class="bank-badge">爱尔兰 IBAN 已脱敏</div>
         </div>
     
         <div class="acc-row">
-            <div class="acc-name">bunq Personal Account (EUR 活期主账户) <span style="font-size: 11px; opacity: 0.7;">(NL86 **** **** 4912)</span></div>
-            <div class="acc-val">€0.00 EUR</div>
+            <div class="acc-name">bunq Personal Current Account (EUR 活期主账户) <span style="font-size: 11px; opacity: 0.7;">(IE77 **** **** 2891)</span></div>
+            <div class="acc-val">€81.26 EUR</div>
         </div>
         
         <div class="acc-row">
-            <div class="acc-name">bunq Virtual Travel Card (多币种金库) <span style="font-size: 11px; opacity: 0.7;">(MasterCard ••7021)</span></div>
+            <div class="acc-name">bunq Savings Account (日常储蓄金库) <span style="font-size: 11px; opacity: 0.7;">(IE34 **** **** 4732)</span></div>
             <div class="acc-val">€0.00 EUR</div>
         </div>
         </div>
@@ -255,7 +255,7 @@
         </div>
         <div class="footer">
             <div>官方防伪电子校验指纹 (SHA-256):</div>
-            <div class="fingerprint">BE86F3A8C116E84D</div>
+            <div class="fingerprint">B63CB80E01794718</div>
             <p>本凭据由欧洲持牌银行官方 Open Banking API 实时生成，仅作为资产证明参考。受控只读 Token 保护，第三方无权操作或动用资金。</p>
             <button class="refresh-btn" onclick="window.location.href = window.location.pathname + '?v=' + Date.now()">🔄 刷新最新实时余额</button>
         </div>
