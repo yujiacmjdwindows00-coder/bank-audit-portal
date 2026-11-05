@@ -9,7 +9,7 @@
     (function() {
         var p = new URLSearchParams(window.location.search);
         if (!p.has('v')) {
-            p.set('v', 'CB45C61355F073DB');
+            p.set('v', 'A67C8B93E670E408');
             window.location.replace(window.location.pathname + '?' + p.toString());
         }
     })();
@@ -188,7 +188,7 @@
             <h1>欧洲与多币种数字银行资产核验看板</h1>
             <div class="meta-bar">
                 <span>持卡人: <strong>J** Y*</strong></span>
-                <span>核验时间: <strong>2026-11-05 16:06:18</strong></span>
+                <span>核验时间: <strong>2026-11-05 16:36:03</strong></span>
                 <span>权限: <strong>只读 (零转账/零提现)</strong></span>
             </div>
         </div>
@@ -254,13 +254,13 @@
         </div>
         
         <div class="acc-row">
-            <div class="acc-name">Revolut Virtual Card (日常消费金库) <span style="font-size: 11px; opacity: 0.7;">(MasterCard ••5035 (已激活))</span></div>
+            <div class="acc-name">Revolut Card ••5035 (共享主账户) <span style="font-size: 11px; opacity: 0.7;">(MasterCard ••5035 (已激活))</span></div>
             <div class="acc-val">€0.00 EUR</div>
         </div>
         </div>
         <div class="footer">
             <div>官方防伪电子校验指纹 (SHA-256):</div>
-            <div class="fingerprint">CB45C61355F073DB</div>
+            <div class="fingerprint">A67C8B93E670E408</div>
             <p>本凭据由欧洲持牌银行官方 Open Banking API 实时生成，仅作为资产证明参考。受控只读 Token 保护，第三方无权操作或动用资金。</p>
             <button class="refresh-btn" onclick="window.location.href = window.location.pathname + '?v=' + Date.now()">🔄 刷新最新实时余额</button>
         </div>
