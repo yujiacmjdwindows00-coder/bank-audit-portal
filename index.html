@@ -9,7 +9,7 @@
     (function() {
         var p = new URLSearchParams(window.location.search);
         if (!p.has('v')) {
-            p.set('v', '3CFF246886A83977');
+            p.set('v', 'FE8777CDE08A1F95');
             window.location.replace(window.location.pathname + '?' + p.toString());
         }
     })();
@@ -188,7 +188,7 @@
             <h1>欧洲与多币种数字银行资产核验看板</h1>
             <div class="meta-bar">
                 <span>持卡人: <strong>J** Y*</strong></span>
-                <span>核验时间: <strong>2026-11-05 17:54:18</strong></span>
+                <span>核验时间: <strong>2026-11-05 17:59:28</strong></span>
                 <span>权限: <strong>只读 (零转账/零提现)</strong></span>
             </div>
         </div>
@@ -202,7 +202,7 @@
     <div class="bank-card">
         <div class="bank-header">
             <div class="bank-title"><span class="dot dot-bunq"></span> bunq (爱尔兰与欧洲中央银行监管持牌行)</div>
-            <div class="bank-badge">官方实时 · 2026-11-05 17:54:18</div>
+            <div class="bank-badge">官方实时 · 2026-11-05 17:59:28</div>
         </div>
     
         <div class="acc-row">
@@ -245,37 +245,22 @@
     <div class="bank-card">
         <div class="bank-header">
             <div class="bank-title"><span class="dot dot-revolut"></span> Revolut Bank UAB (欧洲央行持牌)</div>
-            <div class="bank-badge">网页实时 · 2026-11-05 17:37:54</div>
+            <div class="bank-badge">占位/需重新登录 · Revolut 网页会话已掉线，需重新登录守护</div>
         </div>
     
         <div class="acc-row">
-            <div class="acc-name">可用余额 Available (首页实时) <span style="font-size: 11px; opacity: 0.7;">(MasterCard ••5339)</span></div>
+            <div class="acc-name">Revolut Personal Account (EUR 活期主账户) <span style="font-size: 11px; opacity: 0.7;">(MasterCard ••5339 (已激活))</span></div>
             <div class="acc-val">€0.00 EUR</div>
         </div>
         
         <div class="acc-row">
-            <div class="acc-name">在途 Pending (0 笔，待结算冻结) <span style="font-size: 11px; opacity: 0.7;">()</span></div>
-            <div class="acc-val">€0.00 EUR</div>
-        </div>
-        
-        <div class="acc-row">
-            <div class="acc-name">账户总额 (含在途资金) <span style="font-size: 11px; opacity: 0.7;">()</span></div>
-            <div class="acc-val">€0.00 EUR</div>
-        </div>
-        
-        <div class="acc-row">
-            <div class="acc-name">Revolut Card ••5339 (共享账户) <span style="font-size: 11px; opacity: 0.7;">(MasterCard ••5339 (已激活))</span></div>
-            <div class="acc-val">€0.00 EUR</div>
-        </div>
-        
-        <div class="acc-row">
-            <div class="acc-name">Revolut Card ••5035 (共享账户) <span style="font-size: 11px; opacity: 0.7;">(MasterCard ••5035 (已激活))</span></div>
+            <div class="acc-name">Revolut Virtual Card (日常消费金库) <span style="font-size: 11px; opacity: 0.7;">(MasterCard ••5035 (已激活))</span></div>
             <div class="acc-val">€0.00 EUR</div>
         </div>
         </div>
         <div class="footer">
             <div>官方防伪电子校验指纹 (SHA-256):</div>
-            <div class="fingerprint">3CFF246886A83977</div>
+            <div class="fingerprint">FE8777CDE08A1F95</div>
             <p>本凭据由欧洲持牌银行官方 Open Banking API 实时生成，仅作为资产证明参考。受控只读 Token 保护，第三方无权操作或动用资金。</p>
             <button class="refresh-btn" onclick="window.location.href = window.location.pathname + '?v=' + Date.now()">🔄 刷新最新实时余额</button>
         </div>
