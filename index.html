@@ -9,7 +9,7 @@
     (function() {
         var p = new URLSearchParams(window.location.search);
         if (!p.has('v')) {
-            p.set('v', '80F792AF223E28BC');
+            p.set('v', '3952EDC88382D64B');
             window.location.replace(window.location.pathname + '?' + p.toString());
         }
     })();
@@ -21,10 +21,10 @@
     <!-- 微信转发与社交分享缩略图规范 (OpenGraph & Microdata) -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="欧洲持牌数字银行联合资产核验凭证">
-    <meta property="og:description" content="包含 bunq、Wise、Monzo、Revolut 实时官方可用余额汇总与电子验签防伪。">
+    <meta property="og:description" content="包含 bunq、Wise、Monzo 实时官方可用余额汇总与电子验签防伪。">
     <meta property="og:image" content="https://sat-efforts-tried-took.trycloudflare.com/static/bank_icon.png">
     <meta itemprop="name" content="欧洲持牌数字银行联合资产核验凭证">
-    <meta itemprop="description" content="包含 bunq、Wise、Monzo、Revolut 实时官方可用余额汇总与电子验签防伪。">
+    <meta itemprop="description" content="包含 bunq、Wise、Monzo 实时官方可用余额汇总与电子验签防伪。">
     <meta itemprop="image" content="https://sat-efforts-tried-took.trycloudflare.com/static/bank_icon.png">
     <meta name="description" content="欧洲持牌数字银行联合资产核验凭证 - 只读受控认证">
     <style>
@@ -128,7 +128,6 @@
         .dot-bunq { background: var(--accent-bunq); }
         .dot-wise { background: var(--accent-wise); }
         .dot-monzo { background: var(--accent-monzo); }
-        .dot-revolut { background: #6366f1; }
         
         .bank-badge {
             font-size: 11px;
@@ -188,7 +187,7 @@
             <h1>欧洲与多币种数字银行资产核验看板</h1>
             <div class="meta-bar">
                 <span>持卡人: <strong>J** Y*</strong></span>
-                <span>核验时间: <strong>2026-11-05 18:30:51</strong></span>
+                <span>核验时间: <strong>2026-11-05 18:35:48</strong></span>
                 <span>权限: <strong>只读 (零转账/零提现)</strong></span>
             </div>
         </div>
@@ -196,13 +195,13 @@
         <div class="total-card">
             <div class="total-label">欧洲持牌银行联合可用资产总估值</div>
             <div class="total-amount">€980.49 EUR</div>
-            <div style="font-size: 12px; color: var(--text-sub); margin-top: 4px;">bunq · Wise · Monzo · Revolut 官方实时联合核验</div>
+            <div style="font-size: 12px; color: var(--text-sub); margin-top: 4px;">bunq · Wise · Monzo 官方实时联合核验</div>
         </div>
 
     <div class="bank-card">
         <div class="bank-header">
             <div class="bank-title"><span class="dot dot-bunq"></span> bunq (爱尔兰与欧洲中央银行监管持牌行)</div>
-            <div class="bank-badge">官方实时 · 2026-11-05 18:30:51</div>
+            <div class="bank-badge">官方实时 · 2026-11-05 18:35:48</div>
         </div>
     
         <div class="acc-row">
@@ -242,25 +241,9 @@
             <div class="acc-val">€389.85 EUR</div>
         </div>
         </div>
-    <div class="bank-card">
-        <div class="bank-header">
-            <div class="bank-title"><span class="dot dot-revolut"></span> Revolut Bank UAB (欧洲央行持牌)</div>
-            <div class="bank-badge">占位/需重新登录 · Revolut 网页会话已掉线，需重新登录守护</div>
-        </div>
-    
-        <div class="acc-row">
-            <div class="acc-name">Revolut Personal Account (EUR 活期主账户) <span style="font-size: 11px; opacity: 0.7;">(MasterCard ••5339 (已激活))</span></div>
-            <div class="acc-val">€0.00 EUR</div>
-        </div>
-        
-        <div class="acc-row">
-            <div class="acc-name">Revolut Virtual Card (日常消费金库) <span style="font-size: 11px; opacity: 0.7;">(MasterCard ••5035 (已激活))</span></div>
-            <div class="acc-val">€0.00 EUR</div>
-        </div>
-        </div>
         <div class="footer">
             <div>官方防伪电子校验指纹 (SHA-256):</div>
-            <div class="fingerprint">80F792AF223E28BC</div>
+            <div class="fingerprint">3952EDC88382D64B</div>
             <p>本凭据由欧洲持牌银行官方 Open Banking API 实时生成，仅作为资产证明参考。受控只读 Token 保护，第三方无权操作或动用资金。</p>
             <button class="refresh-btn" onclick="window.location.href = window.location.pathname + '?v=' + Date.now()">🔄 刷新最新实时余额</button>
         </div>
