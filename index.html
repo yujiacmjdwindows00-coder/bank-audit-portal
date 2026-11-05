@@ -9,7 +9,7 @@
     (function() {
         var p = new URLSearchParams(window.location.search);
         if (!p.has('v')) {
-            p.set('v', '40255B27C716048E');
+            p.set('v', '1BA733A8B8997F20');
             window.location.replace(window.location.pathname + '?' + p.toString());
         }
     })();
@@ -188,14 +188,14 @@
             <h1>欧洲与多币种数字银行资产核验看板</h1>
             <div class="meta-bar">
                 <span>持卡人: <strong>J** Y*</strong></span>
-                <span>核验时间: <strong>2026-11-05 16:44:55</strong></span>
+                <span>核验时间: <strong>2026-11-05 16:50:09</strong></span>
                 <span>权限: <strong>只读 (零转账/零提现)</strong></span>
             </div>
         </div>
 
         <div class="total-card">
             <div class="total-label">欧洲持牌银行联合可用资产总估值</div>
-            <div class="total-amount">€867.79 EUR</div>
+            <div class="total-amount">€1,133.32 EUR</div>
             <div style="font-size: 12px; color: var(--text-sub); margin-top: 4px;">bunq · Wise · Monzo · Revolut 官方实时联合核验</div>
         </div>
 
@@ -245,22 +245,22 @@
     <div class="bank-card">
         <div class="bank-header">
             <div class="bank-title"><span class="dot dot-revolut"></span> Revolut Bank UAB (欧洲央行持牌)</div>
-            <div class="bank-badge">网页实时 · 2026-11-05 16:44:13</div>
+            <div class="bank-badge">网页实时 · 2026-11-05 16:49:44</div>
         </div>
     
         <div class="acc-row">
             <div class="acc-name">Revolut Personal Account (EUR 活期主账户) <span style="font-size: 11px; opacity: 0.7;">(MasterCard ••5339 (已激活))</span></div>
-            <div class="acc-val">€149.99 EUR</div>
+            <div class="acc-val">€415.52 EUR</div>
         </div>
         
         <div class="acc-row">
             <div class="acc-name">Revolut Card ••5035 (共享主账户) <span style="font-size: 11px; opacity: 0.7;">(MasterCard ••5035 (已激活))</span></div>
-            <div class="acc-val">€149.99 EUR</div>
+            <div class="acc-val">€415.52 EUR</div>
         </div>
         </div>
         <div class="footer">
             <div>官方防伪电子校验指纹 (SHA-256):</div>
-            <div class="fingerprint">40255B27C716048E</div>
+            <div class="fingerprint">1BA733A8B8997F20</div>
             <p>本凭据由欧洲持牌银行官方 Open Banking API 实时生成，仅作为资产证明参考。受控只读 Token 保护，第三方无权操作或动用资金。</p>
             <button class="refresh-btn" onclick="window.location.href = window.location.pathname + '?v=' + Date.now()">🔄 刷新最新实时余额</button>
         </div>
