@@ -9,7 +9,7 @@
     (function() {
         var p = new URLSearchParams(window.location.search);
         if (!p.has('v')) {
-            p.set('v', '63C2A430F7762DFC');
+            p.set('v', '5DC8F090F90E89DA');
             window.location.replace(window.location.pathname + '?' + p.toString());
         }
     })();
@@ -187,21 +187,21 @@
             <h1>欧洲与多币种数字银行资产核验看板</h1>
             <div class="meta-bar">
                 <span>持卡人: <strong>J** Y*</strong></span>
-                <span>核验时间: <strong>2026-11-06 22:05:34</strong></span>
+                <span>核验时间: <strong>2026-11-06 22:12:04</strong></span>
                 <span>权限: <strong>只读 (零转账/零提现)</strong></span>
             </div>
         </div>
 
         <div class="total-card">
             <div class="total-label">欧洲持牌银行联合可用资产总估值</div>
-            <div class="total-amount">€1,418.93 EUR</div>
+            <div class="total-amount">€1,213.09 EUR</div>
             <div style="font-size: 12px; color: var(--text-sub); margin-top: 4px;">bunq · Wise · Monzo 官方实时联合核验</div>
         </div>
 
     <div class="bank-card">
         <div class="bank-header">
             <div class="bank-title"><span class="dot dot-bunq"></span> bunq (爱尔兰与欧洲中央银行监管持牌行)</div>
-            <div class="bank-badge">官方实时 · 2026-11-06 22:05:29</div>
+            <div class="bank-badge">官方实时 · 2026-11-06 22:12:01</div>
         </div>
     
         <div class="acc-row">
@@ -221,13 +221,13 @@
         </div>
     
         <div class="acc-row">
-            <div class="acc-name">EUR 钱包</div>
-            <div class="acc-val">€205.84 EUR</div>
+            <div class="acc-name">CNY 钱包</div>
+            <div class="acc-val">¥0.00 CNY</div>
         </div>
         
         <div class="acc-row">
-            <div class="acc-name">CNY 钱包</div>
-            <div class="acc-val">¥0.00 CNY</div>
+            <div class="acc-name">EUR 钱包</div>
+            <div class="acc-val">€0.00 EUR</div>
         </div>
         </div>
     <div class="bank-card">
@@ -243,7 +243,7 @@
         </div>
         <div class="footer">
             <div>官方防伪电子校验指纹 (SHA-256):</div>
-            <div class="fingerprint">63C2A430F7762DFC</div>
+            <div class="fingerprint">5DC8F090F90E89DA</div>
             <p>本凭据由欧洲持牌银行官方 Open Banking API 实时生成，仅作为资产证明参考。受控只读 Token 保护，第三方无权操作或动用资金。</p>
             <button class="refresh-btn" onclick="window.location.href = window.location.pathname + '?v=' + Date.now()">🔄 刷新最新实时余额</button>
         </div>
